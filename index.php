@@ -25,6 +25,13 @@
     display: inline-block;
     margin-bottom: 3rem;
   }
+
+  .footer {
+    width: 101%;
+    margin-bottom: -1%;
+    margin-right: -1%;
+    margin-left: -1%;
+  }
 </style>
 
 
@@ -95,19 +102,7 @@
     $temperature = $_POST["temp"];
 
     $decimal_range = $_POST["decimal_range"];
-    #todos 
-    #trocar todos os retornos por funções (done)
-    #Adicionar todas as fórmulas (done)
-    #Adicionar os Sufixos (Done)
-    #Fazer outras 5 conversões (Done)
-    #adicionar controle de casas decimais (DOne)
-    #Adicionar CSS (Done)
-    #Adicionar mais medidas (Done)
-    #Otimização 1: retornar o sufixo junto com o valor convertido (Done)
-    #otimização 2: transformar o código repetido em uma função (DOne)
-    #correção: fazer os itens aparecerem lado a lado (done)
-    #correção 2: fazer os cards ficarem diferentes (Done)
-    #Adicionar validação da entrada numérica 
+
 
     function get_formula($temperature_type_1, $temperature_type_2)
     {
@@ -348,6 +343,31 @@
     render_cards([$card_answer, $card_celsius, $card_farenheint, $card_kelvin, $card_reaumur, $card_rankine, $card_luisius]);
     ?>
   </form>
+  <div class="footer">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand"> v1.05</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" >Shadowtampa
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/Shadowtampa/conversordovila/">Github</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://twitter.com/vilailus">Twitter</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 
