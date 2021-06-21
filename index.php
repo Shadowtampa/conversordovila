@@ -9,6 +9,8 @@
 
 <style>
   .card {
+    
+    box-shadow: 0em 0 0.4em black;
     width: 25%;
 
     max-width: 20rem;
@@ -16,6 +18,17 @@
     margin-left: 3rem;
     margin-top: 0.1rem;
     justify-content: center;
+  }
+  .navbar {
+    box-shadow: 0em 0 0.4em black;
+  }
+
+  .card-container {
+    justify-content: center;
+    align-items: center;  
+    
+    margin-left: 5rem;
+
   }
 
   .form-group {
@@ -315,7 +328,7 @@
       $bg = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark'];
       $bg_counter = 0;
 
-
+      echo '<div class="card-container">';
       foreach ($card_list as $card) {
 
         echo '<div class="card text-white bg-' . $bg[$bg_counter] . ' mb-3" >
@@ -330,6 +343,8 @@
         }
         $bg_counter++;
       }
+
+      echo '</div>';
     }
 
     $card_answer = set_card($temperature_origin_type, $temperature_goal_type, $temperature, $decimal_range);
@@ -354,14 +369,14 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link active" >Shadowtampa
+              <a class="nav-link active">Shadowtampa
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://github.com/Shadowtampa/conversordovila/">Github</a>
+              <a class="nav-link" target="blank" href="https://github.com/Shadowtampa/conversordovila/">Github</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://twitter.com/vilailus">Twitter</a>
+              <a class="nav-link" target="blank" href="https://twitter.com/vilailus">Twitter</a>
             </li>
           </ul>
         </div>
